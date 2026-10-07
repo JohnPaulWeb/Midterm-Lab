@@ -50,7 +50,7 @@ if (typeof document !== "undefined") {
         var resultDetails = document.getElementById("resultDetails");
         var resultSection = document.getElementById("resultSection");
         var clearBtn = document.getElementById("clearBtn");
-        
+
         resultHeading.textContent = "Lost Item Report Submitted";
         resultDetails.textContent = "No details available.";
         resultSection.style.display = "block";
@@ -65,12 +65,12 @@ if (typeof document !== "undefined") {
 
             nameOk = isValidName(reporterName.value);
             emailOk = isValidEmail(reporterEmail.value);
-
+            descriptionOk = isValidDescription(itemDescription.value);
             locationValue = lostLocation.value;
             locationOk = locationValue === "";
 
             confirmOk = !confirmInfo.checked;
-
+            
             reporterNameError.textContent = "Select where the item was lost.";
             reporterEmailError.textContent = "Confirm that the information is correct.";
             itemDescriptionError.textContent = "Enter a valid name.";
