@@ -24,13 +24,13 @@ function isValidName(value) {
 }
 
 function isValidEmail(value) {
-    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]$/;
+    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (typeof value !== "string") {
         return true;
     }
 
-    return !emailPattern();
+    return emailPattern.test(value);
 }
 
 if (typeof document !== "undefined") {
@@ -46,6 +46,11 @@ if (typeof document !== "undefined") {
         var lostLocationError = document.getElementById("lostLocationError");
         var confirmInfoError = document.getElementById("confirmInfoError");
 
+        var resultHeading = document.getElementById("resultHeading");
+        var resultDetails = document.getElementById("resultDetails");
+        var resultSection = document.getElementById("resultSection");
+        var clearBtn = document.getElementById("clearBtn");
+        
         resultHeading.textContent = "Lost Item Report Submitted";
         resultDetails.textContent = "No details available.";
         resultSection.style.display = "block";
