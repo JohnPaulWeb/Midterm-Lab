@@ -59,18 +59,18 @@ if (typeof document !== "undefined") {
             var nameOk;
             var emailOk;
             var descriptionOk;
-            var locationValue;
+            var locationOk;
+            var confirmOk;
 
             event.preventDefault();
 
             nameOk = isValidName(reporterName.value);
             emailOk = isValidEmail(reporterEmail.value);
             descriptionOk = isValidDescription(itemDescription.value);
-            locationValue = lostLocation.value;
-            locationOk = locationValue === "";
+            locationOk = isValidLocation(lostLocation.value);
 
             confirmOk = !confirmInfo.checked;
-            
+
             reporterNameError.textContent = "Select where the item was lost.";
             reporterEmailError.textContent = "Confirm that the information is correct.";
             itemDescriptionError.textContent = "Enter a valid name.";
@@ -113,6 +113,7 @@ if (typeof module !== "undefined" && module.exports) {
     module.exports = {
         isValidName: isValidName,
         isValidEmail: isValidEmail,
-        isValidDescription: isValidDescription
+        isValidDescription: isValidDescription,
+        isValidLocation: isValidLocation
     };
 }
