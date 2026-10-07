@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eef2f6;
+    color: #1c2833;
+}
+
+.page {
+    width: 640px;
+    max-width: 94%;
+    margin: 32px auto;
+    background-color: #ffffff;
+    border: 1px solid #c5d0dc;
+}
+
+.banner {
+    background-color: #0b3d73;
+    color: #ffffff;
+    padding: 20px 24px;
+}
+
+.banner h1 {
+    margin: 6px 0;
+    font-size: 28px;
+}
+
+.school,
+.course {
+    margin: 0;
+    font-size: 14px;
+}
+
+main {
+    padding: 24px;
+}
+
+.field {
+    margin-bottom: 14px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input[type="text"],
+textarea,
+select {
+    width: 100%;
+    padding: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    border: 1px solid #8aa0b4;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.check-field label {
+    font-weight: normal;
+}
+
+.check-field input {
+    margin-right: 6px;
+}
+
+.error {
+    min-height: 18px;
+    margin: 4px 0 0;
+    color: #b00020;
+    font-size: 14px;
+}
+
+.buttons {
+    margin-top: 8px;
+}
+
+button {
+    padding: 8px 16px;
+    margin-right: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid #0b3d73;
+    background-color: #0b3d73;
+    color: #ffffff;
+}
+
+#clearBtn {
+    background-color: #ffffff;
+    color: #0b3d73;
+}
+
+#resultSection {
+    margin-top: 20px;
+    padding: 16px;
+    border: 1px solid #1e7a3a;
+    background-color: #eef8f1;
+}
+
+#resultHeading {
+    margin: 0 0 10px;
+    font-size: 20px;
+    color: #1e7a3a;
+}
+
+#resultDetails {
+    margin: 0;
+    white-space: pre-line;
+    line-height: 1.6;
+}

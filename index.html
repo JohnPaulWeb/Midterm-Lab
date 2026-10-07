@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost Item Report</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page">
+        <header class="banner">
+            <p class="school">Universidad de Dagupan</p>
+            <h1>Lost Item Report</h1>
+            <p class="course">School of Information Technology Education</p>
+        </header>
+
+        <main>
+            <form id="lostItemForm" action="#" method="post">
+                <div class="field">
+                    <label for="reporterName">Student Name</label>
+                    <input type="text" id="reporterName" name="reporterName">
+                    <p id="reporterNameError" class="error"></p>
+                </div>
+
+                <div class="field">
+                    <label for="reporterEmail">Email Address</label>
+                    <input type="text" id="reporterEmail" name="reporterEmail">
+                    <p id="reporterEmailError" class="error"></p>
+                </div>
+
+                <div class="field">
+                    <label for="itemDescription">Item Description</label>
+                    <textarea id="itemDescription" name="itemDescription" rows="4"></textarea>
+                    <p id="itemDescriptionError" class="error"></p>
+                </div>
+
+                <div class="field">
+                    <label for="lostLocation">Where was the item lost?</label>
+                    <select id="lostLocation" name="lostLocation">
+                        <option value="">-- Select a location --</option>
+                        <option value="library">Library</option>
+                        <option value="laboratory">Laboratory</option>
+                        <option value="cafeteria">Cafeteria</option>
+                    </select>
+                    <p id="lostLocationError" class="error"></p>
+                </div>
+
+                <div class="field check-field">
+                    <label for="confirmInfo">
+                        <input type="checkbox" id="confirmInfo" name="confirmInfo">
+                        I confirm that the information is correct.
+                    </label>
+                    <p id="confirmInfoError" class="error"></p>
+                </div>
+
+                <div class="buttons">
+                    <button type="submit" id="submitBtn">Submit Report</button>
+                    <button type="button" id="clearBtn">Clear</button>
+                </div>
+            </form>
+
+            <section id="resultSection">
+                <h2 id="resultHeading"></h2>
+                <p id="resultDetails"></p>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
